@@ -1,0 +1,20 @@
+@function join-list($list, $separator: ", ") {
+  $result-string: "";
+
+  @each $item in $list {
+    $index: index($list, $item);
+    $result-string: $result-string + $item;
+
+    @if ($index !=length($list)) {
+      $result-string: $result-string + $separator;
+    }
+  }
+
+  @return $result-string;
+}
+
+@mixin get-media($medias...) {
+  @media #{join-list($medias)} {
+    @content;
+  }
+}

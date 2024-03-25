@@ -1,0 +1,13 @@
+// Media
+$fullhd-width: 1560px;
+$desktop-width: 1281px;
+$laptop-width: 1025px;
+$tablet-width: 768px;
+$mobile-width: 280px;
+
+// Media queries as strings
+$fullhd: "(min-width: #{$fullhd-width})";
+$desktop: "(min-width: #{$desktop-width})";
+$laptop: "(min-width: #{$laptop-width}) and (max-width: #{$desktop-width - 1})";
+$tablet: "(min-width: #{$tablet-width}) and (max-width: #{$laptop-width - 1})";
+$mobile: "(max-width: #{$tablet-width - 1})";
